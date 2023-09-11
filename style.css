@@ -1,5 +1,7 @@
 body {
     background: skyblue;
+    padding: 0;
+    margin: 0;
 }
 
 body>div {
@@ -7,6 +9,7 @@ body>div {
     display: flex;
     flex-direction: column;
     width: 400px;
+    margin:10px;
 }
 
 body>div>div {
@@ -18,5 +21,15 @@ body>div>div {
 }
 
 canvas {
+    margin:10px;
     border: 2px solid purple;
+}
+
+footer {
+    position:fixed;
+    width:100%;
+    bottom:0;
+    background:#f080808f;
+    text-align: center;
+
 }
