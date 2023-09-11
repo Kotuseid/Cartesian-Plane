@@ -1,0 +1,22 @@
+body {
+    background: skyblue;
+}
+
+body>div {
+    background: lightgreen;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+body>div>div {
+    background: rgb(255, 255, 127);
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    padding:2px;
+}
+
+canvas {
+    border: 2px solid purple;
+}

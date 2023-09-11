@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartesian plane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div><p>If changing aspect ratio, ensure to change width/height before changing the number of sections in x/y axis.</p></div>
+        <div><label>Width:</label><input type="number" name="width" id="width"></div>
+        <div><label>Height:</label><input type="number" name="height" id="height"></div>
+        <div><label>Sections on X-axis:</label><input type="number" name="sections-x" id="sections-x"></div>
+        <div><label>Sections on Y-axis:</label><input type="number" name="sections-y" id="sections-y"></div>
+        <div>
+            <label>Aspect Ratio:</label> 
+            <input type="radio" name="aspect-ratio" id="r1:1" value="r1:1"><label for="r1:1">1:1</label>
+            <input type="radio" name="aspect-ratio" id="r1:sqrt2" value="r1:sqrt2" checked><label for="r1:sqrt2">1:&radic;2</label>
+            <input type="radio" name="aspect-ratio" id="rnone" value="rnone"><label for="rnone">none</label>
+        </div>
+        <div><button style="width:100%" onclick="download()">Download (no bg)</button></div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>
