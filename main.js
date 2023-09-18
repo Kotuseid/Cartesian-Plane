@@ -18,6 +18,7 @@ let SyInput = document.getElementById("sections-y");
 let r1_1Input = document.getElementById("r1:1");
 let r1_sqrt2Input = document.getElementById("r1:sqrt2");
 let rnoneInput = document.getElementById("rnone");
+let labelInput = document.getElementById("label");
 
 setInputs();
 
@@ -71,6 +72,7 @@ function draw() {
     canvas.width = w;
     canvas.height = h;
     ctx.lineWidth = 2;
+    ctx.font = "12px Times New Roman";
 
     ctx.beginPath();
     ctx.moveTo(0, h / 2);
@@ -96,6 +98,8 @@ function draw() {
         ctx.moveTo(i / Sx * w / 2 + w / 2, 0);
         ctx.lineTo(i / Sx * w / 2 + w / 2, h);
         ctx.stroke();
+
+        if (labelInput.checked) ctx.fillText(i, i / Sx * w / 2 + w / 2 + 5, h / 2 + 15);
     }
     for (let i = Sx; i >= 0; i--) {
         ctx.lineWidth = 2;
@@ -111,6 +115,9 @@ function draw() {
         ctx.moveTo(i / Sx * w / 2, 0);
         ctx.lineTo(i / Sx * w / 2, h);
         ctx.stroke();
+
+        if (labelInput.checked && Sx - i != 0) ctx.fillText(-(Sx - i), i / Sx * w / 2 + 5, h / 2 + 15);
+
     }
 
     for (let i = 0; i <= Sy; i++) {
@@ -124,6 +131,8 @@ function draw() {
         ctx.moveTo(0, i / (Sy) * h / 2 + h / 2);
         ctx.lineTo(w, i / (Sy) * h / 2 + h / 2);
         ctx.stroke();
+
+        if (labelInput.checked && i != 0) ctx.fillText(-i, w / 2 + 5, i / (Sy) * h / 2 + h / 2 + 15);
     }
     for (let i = Sy; i >= 0; i--) {
         ctx.lineWidth = 2;
@@ -136,6 +145,8 @@ function draw() {
         ctx.moveTo(0, i / (Sy) * h / 2);
         ctx.lineTo(w, i / (Sy) * h / 2);
         ctx.stroke();
+
+        if (labelInput.checked && Sy - i != 0) ctx.fillText(Sy - i, w / 2 + 5, i / (Sy) * h / 2 + 15)
     }
 
 
